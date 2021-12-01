@@ -2,9 +2,9 @@ package com.wuziqi.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
-import com.wuziqi.controller.model.Chess;
+import com.wuziqi.model.Chess;
 import com.wuziqi.controller.vm.ChessPointVM;
-import com.wuziqi.controller.model.ChessRecord;
+import com.wuziqi.model.ChessRecord;
 import com.wuziqi.controller.vm.Color;
 import com.wuziqi.controller.vm.Result;
 import com.wuziqi.mapper.ChessMapper;
@@ -257,7 +257,7 @@ public class WuziqiServiceImpl implements WuziqiService{
                 whiteChessPointVMList.remove(chessPointVM);
             }
         }
-        int maxX = 19 , maxY = 19;
+        int maxX = 0 , maxY = 0;
         for (ChessPointVM pointVM : restOfPieceList) {
             if (pointVM.getX() >= maxX){
                 maxX = pointVM.getX();

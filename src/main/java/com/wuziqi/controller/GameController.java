@@ -1,6 +1,6 @@
 package com.wuziqi.controller;
 
-import com.wuziqi.controller.model.ChessRecord;
+import com.wuziqi.model.ChessRecord;
 import com.wuziqi.service.WuziqiService;
 import org.springframework.web.bind.annotation.*;
 

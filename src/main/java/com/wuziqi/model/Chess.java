@@ -1,17 +1,15 @@
-package com.wuziqi.controller.model;
+package com.wuziqi.model;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 @Data
-public class ChessRecord {
+public class Chess {
     @TableId(type = IdType.AUTO)
     private int id;
-    private int gameId;
-    private int x;
-    private int y;
-    private String color;
-    private String createTime;
+    private String startTime;
+    private String endTime;
+    private String result;
 
 }
