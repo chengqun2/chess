@@ -1,3 +1,12 @@
+create table USER(
+    ID int auto_increment,
+    USERNAME VARCHAR2,
+    PASSWORD VARCHAR2,
+    CREATE_TIME VARCHAR2,
+    constraint USER_PK
+        primary key (ID)
+);
+
 create table CHESS
 (
     ID         int auto_increment,
