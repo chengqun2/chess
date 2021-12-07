@@ -1,4 +1,4 @@
-package com.wuziqi.conf;
+package com.wuziqi.configuration;
 
 import com.wuziqi.service.JwtUserDetailsServiceImpl;
 import io.jsonwebtoken.ExpiredJwtException;

@@ -3,8 +3,8 @@
     1、SpringBoot、Spring Security、Mybatis-plus
     2、Https、跨域请求、token验证
     3、h2数据库（免安装）
+    4、swagger-ui     访问地址：http://localhost:8066/swagger-ui/
 
---
 ### 五子棋后台api介绍
     1、棋盘大小为 20x20
     2、用户先落子（机器后下）

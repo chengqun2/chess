@@ -1,4 +1,4 @@
-package com.wuziqi.conf;
+package com.wuziqi.configuration;
 
 import java.io.Serializable;
 import java.util.Date;

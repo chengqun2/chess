@@ -1,4 +1,4 @@
-package com.wuziqi.conf;
+package com.wuziqi.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -39,16 +39,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         // ignoring 代表完全不经过security了，慎用！
 //        web.ignoring().antMatchers("/api/authenticate").antMatchers("/h2/**");
+        web.ignoring().mvcMatchers("/swagger-ui.html/**",
+                "/configuration/**","/swagger-resources/**",
+                "/swagger-ui/","/swagger-ui/**",
+                "/v2/api-docs","/webjars/**");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/games/**")
-                .permitAll()
+                .antMatchers("/games/**").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/authenticate").permitAll()
-                .antMatchers("/h2/**")
-                .permitAll()
+                .antMatchers("/h2/**") .permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()

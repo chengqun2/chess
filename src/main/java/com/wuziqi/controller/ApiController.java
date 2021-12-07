@@ -1,6 +1,6 @@
 package com.wuziqi.controller;
 
-import com.wuziqi.conf.JwtTokenUtil;
+import com.wuziqi.configuration.JwtTokenUtil;
 import com.wuziqi.controller.vm.JwtRequest;
 import com.wuziqi.controller.vm.JwtResponse;
 import org.springframework.beans.factory.annotation.Autowired;
