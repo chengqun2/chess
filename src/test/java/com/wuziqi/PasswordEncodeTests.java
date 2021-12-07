@@ -56,4 +56,20 @@ public class PasswordEncodeTests {
                 .content(requestJson)).andDo(print()).andExpect(status().isOk())
                 .andExpect(jsonPath("$.token").exists());
     }
+
+    @Test
+    public void testWithToken() throws Exception {
+//        Map map = new HashMap<>();
+//        map.put("username","admin");
+//        map.put("password","admin");
+//        ObjectMapper mapper = new ObjectMapper();
+//        mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, false);
+//        ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
+//        String requestJson = ow.writeValueAsString(map);
+        this.mockMvc.perform(post("/api/test")
+                        .header("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYzODUyMzc4MiwiaWF0IjoxNjM4NDM3MzgyfQ.6VDpUw7toM-PlWWkpI5nnuUiLn1FbE_227Sz0dmF84N4Ffnhg2ACgHRLKaCz_mZl4lKhjmIOLcZFlv-UUWsUAQ")
+//                .contentType(MediaType.APPLICATION_JSON)
+//                .content(requestJson)
+        ).andDo(print()).andExpect(status().isOk());
+    }
 }
