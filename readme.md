@@ -1,6 +1,6 @@
 # Java 五子棋人机对战 的后台部分(Rest API)
 
-SpringBoot、Https、跨域请求、h2数据库（免安装）
+SpringBoot、Mybatis-plus、Https、跨域请求、h2数据库（免安装）
 
     1、棋盘大小为 20x20
     2、用户先落子（机器后下）
