@@ -16,6 +16,6 @@ public class FeignTests {
 
     @Test
     public void test(){
-        System.out.println(invokeYdpcsFeignClient.getTest("222").get("games"));
+//        System.out.println(invokeYdpcsFeignClient.getTest("222").get("games"));
     }
 }
