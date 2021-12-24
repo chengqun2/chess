@@ -67,7 +67,7 @@ public class PasswordEncodeTests {
 //        ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
 //        String requestJson = ow.writeValueAsString(map);
         this.mockMvc.perform(post("/api/test")
-                        .header("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYzODUyMzc4MiwiaWF0IjoxNjM4NDM3MzgyfQ.6VDpUw7toM-PlWWkpI5nnuUiLn1FbE_227Sz0dmF84N4Ffnhg2ACgHRLKaCz_mZl4lKhjmIOLcZFlv-UUWsUAQ")
+                        .header("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTYzOTA5ODgwNiwiaWF0IjoxNjM5MDEyNDA2fQ.u3Zp-tKjCMbkvX7ps8nKfND9Je_hd_7ZqMhuOBJMtq-h2j3TZHDo1Q-fOdwuU7N_OQukws83JUdenqOm_oDjGw")
 //                .contentType(MediaType.APPLICATION_JSON)
 //                .content(requestJson)
         ).andDo(print()).andExpect(status().isOk());
