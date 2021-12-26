@@ -12,7 +12,7 @@ import java.util.concurrent.*;
 
 @SpringBootTest
 public class ThreadTests {
-    private final Logger log = LoggerFactory.getLogger(this.getClass());
+
     @Test
     public void test() throws ExecutionException, InterruptedException {
         ExecutorService executorService = Executors.newCachedThreadPool();
