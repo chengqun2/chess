@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class PasswordEncodeTests {
+public class TokenTests {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 

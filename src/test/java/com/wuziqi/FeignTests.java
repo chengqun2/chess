@@ -6,6 +6,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
+import java.util.Map;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -16,6 +18,11 @@ public class FeignTests {
 
     @Test
     public void test(){
-//        System.out.println(invokeYdpcsFeignClient.getTest("222").get("games"));
+        Map map = new HashMap<>();
+        map.put("username","admin");
+        map.put("password","admin");
+        String token = invokeYdpcsFeignClient.getToken(map).get("token").toString();
+        System.out.println(token);
+        System.out.println(invokeYdpcsFeignClient.test("Bearer "+token,1));
     }
 }

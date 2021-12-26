@@ -55,8 +55,8 @@ public class ApiController {
         }
     }
 
-    @PostMapping("/test")
-    public String test(){
-        return "test...";
+    @PostMapping("/test/{id}")
+    public String test(@PathVariable("id") int id){
+        return "test:"+id;
     }
 }
