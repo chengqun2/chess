@@ -2,7 +2,7 @@
 ## 技术点：
     1、Spring Cloud、Spring Boot、Spring Security、Mybatis-plus
     2、Https、跨域请求、token验证
-    3、h2数据库（免安装）
+    3、h2数据库（免安装）、redis
     4、swagger-ui     访问地址：http://localhost:8066/swagger-ui/
     5、openfeign
 
