@@ -1,7 +1,6 @@
 package com.wuziqi;
 
 import com.wuziqi.controller.vm.ChessPointVM;
-import com.wuziqi.model.Chess;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
