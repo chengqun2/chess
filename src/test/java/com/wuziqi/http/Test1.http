@@ -1,0 +1,27 @@
+### getMap
+POST http://localhost:8066/api/getMap
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNjU2NDczOTUwLCJpYXQiOjE2NTYzODc1NTB9.hVDMDUmntnsJGv3zGQVzg-xDXr4QrHTFpYwLlpl1bbk4w2R_K6_lLmX-pWbYvBHfa3ZF30FwNIWV8qObnCPS9Q
+Content-Type: application/json
+
+{
+  "code": 10,
+  "name": "test"
+}
+
+### authenticate
+POST http://localhost:8066/api/authenticate
+Content-Type: application/json
+
+{
+  "username":"cq",
+  "password":"123456"
+}
+
+### test
+POST http://localhost:8066/api/test/10
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNjU2NDczOTUwLCJpYXQiOjE2NTYzODc1NTB9.hVDMDUmntnsJGv3zGQVzg-xDXr4QrHTFpYwLlpl1bbk4w2R_K6_lLmX-pWbYvBHfa3ZF30FwNIWV8qObnCPS9Q
+Content-Type: application/json
+
+{}
+
+

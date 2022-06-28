@@ -12,6 +12,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 
 @EnableWebSecurity
@@ -38,7 +39,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) throws Exception {
         // ignoring 代表完全不经过security了，慎用！
-//        web.ignoring().antMatchers("/api/authenticate").antMatchers("/h2/**");
+        web.ignoring().antMatchers("/api/authenticate")
+                .antMatchers("/api/test")
+                .antMatchers("/h2/**");
         web.ignoring().mvcMatchers("/swagger-ui.html/**",
                 "/configuration/**","/swagger-resources/**",
                 "/swagger-ui/","/swagger-ui/**",
@@ -50,6 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/games/**").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/authenticate").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/test").permitAll()
                 .antMatchers("/h2/**") .permitAll()
                 .anyRequest()
                 .authenticated()
@@ -76,5 +80,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // Add a filter to validate the tokens with every request
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
         http.cors().configurationSource(request -> new CorsConfiguration().applyPermitDefaultValues());
+
     }
 }

@@ -13,6 +13,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
 import java.util.Objects;
 
 @RestController
@@ -32,7 +33,7 @@ public class ApiController {
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest)
             throws Exception {
 
-        authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
+//        authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
 
         final UserDetails userDetails = jwtInMemoryUserDetailsService
                 .loadUserByUsername(authenticationRequest.getUsername());
@@ -57,6 +58,11 @@ public class ApiController {
 
     @PostMapping("/test/{id}")
     public String test(@PathVariable("id") int id){
-        return "test:"+id;
+        return "id:"+id;
+    }
+
+    @PostMapping("/getMap")
+    public Map test(@RequestBody Map map){
+        return map;
     }
 }
